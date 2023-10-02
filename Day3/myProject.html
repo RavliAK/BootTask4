@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <title>Batch 50</title>    
+    <link href="./asset/css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav-left">
+        <ul>
+          <img src="./asset/image/logo.png" alt="logo" />
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="./blog.html">Blog</a>
+          </li>
+          <li>
+            <a href="./myProject.html">Projects</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-right">
+        <a href="./contactMe.html">Contact Me</a>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <div class="blog">
+      <div class="blog-form">
+        <div class="form-container">
+          <form onsubmit="submitData(event)">
+            <h1>Record Previous Project</h1>
+            <div>
+              <label for="input-blog-projectName">Project Name</label>
+              <input id="input-blog-title" />
+            </div>
+            <div>
+                <a style="width: 50%;"><label for="input-blog-startDate">Start Date</label></a>
+                <a style="width: 50%; margin-left: 100px; ;"><label for="input-blog-startDate">End Date</label></a>
+            </div>
+                
+                <a><input style="width: 45%;" type="date" id="input-blog-startDate" /></a>
+                
+                 <a><input style="width: 45%;" type="date" id="input-blog-endDate" /></a>
+              
+            <div>
+              <label for="input-blog-description">Description</label>
+              <textarea id="input-blog-description" style="margin-bottom: 10px;"></textarea>
+            </div>
+            <h2>technologies</h2>
+                <div style="display: flex; flex-wrap: wrap;"> 
+                  <div style="flex:50%">
+                    <label for="tech1" style="margin-left: 50;"> javascript</label>
+                    <input type="checkbox" id="tech1" name="tech1" value="javascript" >
+                    <label for="tech2" style="margin-left: 76;"> php</label>
+                    <input type="checkbox" id="tech2" name="tech2" value="php" >
+                    </div>
+                    <div style="flex:50%">
+                    <label for="tech3" style="margin-left: 74;"> html</label><br>
+                    <input type="checkbox" id="tech3" name="tech3" value="html">
+                    <label for="tech4" style="margin-left: 71;"> C++</label><br>
+                    <input type="checkbox" id="tech4" name="tech3" value="C++" style="flex:50%;">
+                    </div>
+                </div>
+                
+            
+                <div>
+                  <label>Upload Image</label>
+                  <div class="input-blog-image-group">
+                    <label for="input-blog-image">
+                      <p>Attach File</p>
+                      <img src="asset/image/file.png" alt="file" />
+                    </label>
+                    <input type="file" id="input-blog-image" accept="image/*" onchange="loadFile(event)">
+                    <img id="output" style="width: 300px; height: auto; margin-left: 25;"/>
+                  </div>
+                </div>
+                <div class="button-group">
+                  <button>Add Project</button>
+                </div>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+    
+    <hr class="line" />
+      <div class="blog-list" id="contents">
+        <!-- dynamic content would be here -->
+      </div>
+    </div>
+    <script src="./asset/js/project.js"></script>
+  </body>
+</html>
